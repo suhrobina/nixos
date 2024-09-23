@@ -1,0 +1,1 @@
+/etc/nixos/hosts/p50/configuration.nix
