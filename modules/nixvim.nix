@@ -11,7 +11,7 @@ in
 
 {
   imports = [
-
+    # For home-manager
     #nixvim.homeManagerModules.nixvim
 
     # For NixOS
@@ -42,6 +42,7 @@ in
     plugins.airline.enable = true;
     plugins.bufferline.enable = true;
     plugins.lualine.enable = true;
+    plugins.nvim-colorizer.enable = true;
     plugins.nix.enable = true;
     plugins.nix-develop.enable = true;
     plugins.indent-blankline.enable = true;

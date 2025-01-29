@@ -26,6 +26,7 @@
       #../../modules/gpu.nix
       ../../modules/nixvim.nix
       ../../modules/zsh.nix
+      ../../modules/hyprland.nix
     ];
 
   # Enable/Disable imported modules
@@ -117,6 +118,7 @@
       }];
   }];
 
+
   # ==| PACKAGES |=============================================================
 
   # Main browser
@@ -154,7 +156,7 @@
     qownnotes
 
     # Editor
-    vscode
+    vscodium
 
     # Terminal
     kitty kitty-themes
@@ -179,6 +181,7 @@
     # Others
     just
     pomodoro-gtk
+    turbovnc # TightVNC
   ];
 
   # --| Transmission |---------------------------------------------------------

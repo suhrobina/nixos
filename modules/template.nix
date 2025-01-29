@@ -4,7 +4,7 @@
     THE_MODULE.enable = lib.mkEnableOption "enables THE_MODULE";
   };
 
-  config = lib.mkIf config.zsh.enable {
+  config = lib.mkIf config.THE_MODULE.enable {
     # HERE SHOULD BE CONFIGURATION
   };
 }
