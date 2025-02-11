@@ -1,0 +1,1 @@
+/etc/nixos/hosts/p50/home-manager.nix
