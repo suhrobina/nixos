@@ -12,6 +12,7 @@ in
     (import "${home-manager}/nixos")
   ];
 
+
   users.users.suhrob.isNormalUser = true;
 
   home-manager.users.suhrob = { pkgs, ... }: {
@@ -115,6 +116,13 @@ in
 #      ".config/kitty/kitty.conf".source = ./home/.config/kitty/kitty.conf;
 #      ".config/hypr/hyprland.conf".source = ./home/.config/hypr/hyprland.conf;
 #      ".config/waybar/config".source = ./home/.config/waybar/config;
+#       "/home/suhrob/.config/test.txt".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/hosts/p50/dotfiles/test.txt";
+
+#      home.file.".config/test.txt" = {
+#        source = "/etc/nixos/hosts/p50/dotfiles/test.txt";
+#        #recursive = true;
+#      };
+
     };
 
     # Home Manager can also manage your environment variables through

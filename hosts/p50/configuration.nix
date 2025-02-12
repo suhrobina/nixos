@@ -226,7 +226,7 @@
   #}
   # ---------------------------------------------------------------------------
 
-  # ==| END | =================================================================
+  # ==| END |==================================================================
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -286,7 +286,7 @@
   #   };
   # };
 
-  # ==| END | =================================================================
+  # ==| END |==================================================================
 
   # ==| OTHERs |===============================================================
 
@@ -311,7 +311,7 @@
   # Without this option, WireGuard doesn't work
   networking.firewall.checkReversePath = "loose";
 
-  # ==| END | =================================================================
+  # ==| END |==================================================================
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
