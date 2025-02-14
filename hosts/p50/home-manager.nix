@@ -135,6 +135,7 @@ in
       "${homeFolder}/.config/kitty/kitty.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/kitty/kitty.conf";
       "${homeFolder}/.config/waybar/config".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/waybar/config";
       "${homeFolder}/.config/yazi/".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/yazi";
+      "${homeFolder}/Pictures/wallpaper.jpg".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/Pictures/wallpaper.jpg";
     };
 
     # Home Manager can also manage your environment variables through
