@@ -5,6 +5,8 @@
 
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz";
+  homeFolder = "/home/suhrob";
+  configFolder = "/etc/nixos/hosts/p50/dotfiles";
 in
 
 {
@@ -15,7 +17,7 @@ in
 
   users.users.suhrob.isNormalUser = true;
 
-  home-manager.users.suhrob = { pkgs, ... }: {
+  home-manager.users.suhrob = { pkgs, config, ... }: {
 
     # This value determines the Home Manager release that your configuration is
     # compatible with. This helps avoid breakage when a new Home Manager release
@@ -100,6 +102,7 @@ in
       pkgs.kdePackages.qt6ct
     ];
 
+    # Method #1
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
     home.file = {
@@ -116,13 +119,22 @@ in
 #      ".config/kitty/kitty.conf".source = ./home/.config/kitty/kitty.conf;
 #      ".config/hypr/hyprland.conf".source = ./home/.config/hypr/hyprland.conf;
 #      ".config/waybar/config".source = ./home/.config/waybar/config;
-#       "/home/suhrob/.config/test.txt".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/hosts/p50/dotfiles/test.txt";
 
-#      home.file.".config/test.txt" = {
-#        source = "/etc/nixos/hosts/p50/dotfiles/test.txt";
-#        #recursive = true;
-#      };
+    };
 
+    # Method #2
+    # Managing dotfiles using the 'mkOutOfStoreSymlink' function. This function
+    # allows the creation of a symlink to a path outside the nix store
+    home.file = {
+      # You can use mkOutOfStoreSymlink function to create symlinks for both
+      # files and directories. Ensure that the source file or directory exists
+      # before creating the symlink, and that the target path does not already
+      # exist to avoid conflicts.
+      "${homeFolder}/.config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprland.conf";
+      "${homeFolder}/.config/hypr/hyprpaper.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprpaper.conf";
+      "${homeFolder}/.config/kitty/kitty.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/kitty/kitty.conf";
+      "${homeFolder}/.config/waybar/config".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/waybar/config";
+      "${homeFolder}/.config/yazi/".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/yazi";
     };
 
     # Home Manager can also manage your environment variables through
