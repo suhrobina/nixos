@@ -116,10 +116,6 @@ in
       #   org.gradle.console=verbose
       #   org.gradle.daemon.idletimeout=3600000
       # '';
-#      ".config/kitty/kitty.conf".source = ./home/.config/kitty/kitty.conf;
-#      ".config/hypr/hyprland.conf".source = ./home/.config/hypr/hyprland.conf;
-#      ".config/waybar/config".source = ./home/.config/waybar/config;
-
     };
 
     # Method #2
@@ -133,7 +129,8 @@ in
       "${homeFolder}/.config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprland.conf";
       "${homeFolder}/.config/hypr/hyprpaper.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprpaper.conf";
       "${homeFolder}/.config/kitty/kitty.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/kitty/kitty.conf";
-      "${homeFolder}/.config/waybar/config".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/waybar/config";
+      "${homeFolder}/.config/waybar/config.jsonc".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/waybar/config.jsonc";
+      "${homeFolder}/.config/waybar/style.css".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/waybar/style.css";
       "${homeFolder}/.config/yazi/".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/yazi";
       "${homeFolder}/Pictures/wallpaper.jpg".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/Pictures/wallpaper.jpg";
     };

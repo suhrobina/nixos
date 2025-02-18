@@ -1,5 +1,6 @@
 // -*- mode: jsonc -*-
 {
+    "reload_style_on_change": true,
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height (to be removed for auto height)
@@ -7,6 +8,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/logo",
         "hyprland/workspaces",
         "hyprland/mode",
         "hyprland/scratchpad",
@@ -26,7 +28,7 @@
         "temperature",
         "backlight",
         "keyboard-state",
-        "sway/language",
+        "hyprland/language",
         "battery",
         "battery#bat2",
         "clock",
@@ -38,7 +40,9 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "format": "{name}",
         "format-icons": {
             // "1": "",
             // "2": "",
@@ -49,6 +53,13 @@
             "active": "",
             //"focused": "",
             "default": ""
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
         }
     },
     "keyboard-state": {
@@ -60,10 +71,10 @@
             "unlocked": ""
         }
     },
-    "sway/mode": {
+    "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "sway/scratchpad": {
+    "hyprland/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
         "format-icons": ["", ""],
@@ -212,5 +223,11 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    "custom/logo": {
+	"format": " ",
+	"on-click": "rofi -show drun -terminal 'kitty' -font 'IosevkaTerm Nerd Font 12' -show-icons -theme fullscreen-preview",
+	"tooltip": "true",
+	"tooltip-format": "NixOS 24.11"
     }
 }
