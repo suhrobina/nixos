@@ -28,6 +28,7 @@
     tmux
     kitty kitty-themes
     networkmanagerapplet # nm-applet
+    btop
 
     # File Manager Yazi with additional features
     yazi ffmpeg p7zip jq poppler fd ripgrep fzf zoxide imagemagick xclip wl-clipboard xsel

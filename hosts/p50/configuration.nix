@@ -190,6 +190,7 @@
     # Others
     vlc
     just
+    inetutils
     pomodoro-gtk
     turbovnc # TightVNC
     alsa-utils # alsamixer

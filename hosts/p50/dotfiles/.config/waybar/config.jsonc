@@ -21,18 +21,18 @@
         "mpd",
         "idle_inhibitor",
         "pulseaudio",
-        "network",
+        //"network",
         "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
         "backlight",
-        "keyboard-state",
+        "clock",
+        "tray",
+        //"keyboard-state",
         "hyprland/language",
         "battery",
         "battery#bat2",
-        "clock",
-        "tray",
         "custom/power"
     ],
     // Modules configuration
@@ -53,14 +53,14 @@
             "active": "",
             //"focused": "",
             "default": ""
-        },
-        "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
         }
+//        "persistent-workspaces": {
+//            "1": [],
+//            "2": [],
+//            "3": [],
+//            "4": [],
+//            "5": []
+//        }
     },
     "keyboard-state": {
         "numlock": true,
@@ -70,6 +70,11 @@
             "locked": "",
             "unlocked": ""
         }
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "🇺🇲",
+        "format-ru": "🇷🇺"
     },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
@@ -115,7 +120,7 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 25,
         "spacing": 10
     },
     "clock": {
@@ -124,24 +129,35 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "interval": 2,
+        "format": "  {usage}%",
+        "tooltip": false,
+        "on-click": "kitty -e btop",
+        "states": {
+            "average":41,
+            "high":81
+        }
     },
     "memory": {
-        "format": "{}% "
+        "interval": 2,
+        "format": "  {}%",
+        "on-click": "kitty -e btop"
     },
     "temperature": {
+        "interval": 2,
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format": " {icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "on-click": "kitty -e btop"
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "tooltip": false
     },
     "battery": {
         "states": {
@@ -156,7 +172,8 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "interval": 10
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -183,7 +200,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
