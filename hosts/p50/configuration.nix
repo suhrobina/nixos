@@ -193,7 +193,8 @@
     inetutils
     pomodoro-gtk
     turbovnc # TightVNC
-    alsa-utils # alsamixer
+    #alsa-utils # alsamixer
+    pulsemixer
     cifs-utils # SAMBA
    ];
 
