@@ -138,6 +138,8 @@ in
       # exist to avoid conflicts.
       "${homeFolder}/.config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprland.conf";
       "${homeFolder}/.config/hypr/hyprpaper.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprpaper.conf";
+      "${homeFolder}/.config/hypr/hyprlock.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprlock.conf";
+      "${homeFolder}/.config/hypr/hypridle.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hypridle.conf";
       "${homeFolder}/.config/kitty/kitty.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/kitty/kitty.conf";
       "${homeFolder}/.config/waybar/config.jsonc".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/waybar/config.jsonc";
       "${homeFolder}/.config/waybar/style.css".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/waybar/style.css";

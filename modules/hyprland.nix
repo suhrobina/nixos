@@ -58,8 +58,10 @@
     yazi ffmpeg p7zip jq poppler fd ripgrep fzf zoxide imagemagick xclip wl-clipboard xsel
 
     # Hypr Ecosystem
-    hyprshade
     hyprpaper
+    hyprlock
+    hypridle
+    hyprshade
   ];
 
   fonts.packages = with pkgs; [
