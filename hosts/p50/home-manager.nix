@@ -76,11 +76,18 @@ in
       };
     };
 
-    # Enable and configure dunst as a service
+    # Enable and configure Notification Daemon
     services.dunst = {
       enable = true;
       settings = {
         global = {
+          width = 400;
+          # height = 400;
+          offset = "30x35";
+          origin = "top-right";
+          # transparency = 90;
+          corner_radius = 10;
+          padding = 8;
           font = "IosevkaTerm Nerd Font 12";
         };
       };
@@ -110,6 +117,9 @@ in
       # QT5/QT6 Configuration Tool
       pkgs.libsForQt5.qt5ct
       pkgs.kdePackages.qt6ct
+
+      # Library that sends desktop notifications to a notification daemon
+      pkgs.libnotify
     ];
 
     # Method #1
