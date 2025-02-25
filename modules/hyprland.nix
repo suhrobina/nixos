@@ -11,19 +11,10 @@
     xwayland.enable = true;
   };
 
-  # Enable a minimal TUI Display Manager
-  services.displayManager.ly.enable = true;
-
-  # Enabling Bluetooth support
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-
   # GTK+ Bluetooth Manager
   services.blueman.enable = true;
 
-  # Main browser
+  # Main Browser
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [

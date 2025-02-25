@@ -76,6 +76,9 @@
   #services.xserver.displayManager.gdm.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
 
+  # Enable a minimal TUI Display Manager
+  services.displayManager.ly.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us,ru";
@@ -84,6 +87,12 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+
+  # Enabling Bluetooth support
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 
   # Enable sound with pipewire.
   hardware.pulseaudio = {
