@@ -76,6 +76,16 @@ in
       };
     };
 
+    # Enable and configure dunst as a service
+    services.dunst = {
+      enable = true;
+      settings = {
+        global = {
+          font = "IosevkaTerm Nerd Font 12";
+        };
+      };
+    };
+
     home.packages = [
       # # Adds the 'hello' command to your environment. It prints a friendly
       # # "Hello, world!" when run.

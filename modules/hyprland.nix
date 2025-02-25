@@ -11,6 +11,28 @@
     xwayland.enable = true;
   };
 
+  # Enable a minimal login manager
+  services.greetd = {
+    enable = true;
+    settings = {
+      initial_session = {
+        #command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+        user = "suhrob";
+      };
+    };
+  };
+
+
+  # Enabling Bluetooth support
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
+  # GTK+ Bluetooth Manager
+  services.blueman.enable = true;
+
   # Main browser
   programs.firefox.enable = true;
 
