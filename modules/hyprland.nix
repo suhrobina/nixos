@@ -11,18 +11,8 @@
     xwayland.enable = true;
   };
 
-  # Enable a minimal login manager
-  services.greetd = {
-    enable = true;
-    settings = {
-      initial_session = {
-        #command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
-        user = "suhrob";
-      };
-    };
-  };
-
+  # Enable a minimal TUI Display Manager
+  services.displayManager.ly.enable = true;
 
   # Enabling Bluetooth support
   hardware.bluetooth = {
