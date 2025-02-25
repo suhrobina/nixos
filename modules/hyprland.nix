@@ -43,6 +43,7 @@
     hyprlock
     hypridle
     hyprshade
+    hyprpolkitagent
   ];
 
   fonts.packages = with pkgs; [
