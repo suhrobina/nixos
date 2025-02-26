@@ -24,6 +24,7 @@
 
     playerctl
     brightnessctl
+    mpv
 
     waybar
     rofi-wayland

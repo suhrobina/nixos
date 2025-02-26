@@ -12,7 +12,8 @@
         "hyprland/workspaces",
         "hyprland/mode",
         "hyprland/scratchpad",
-        "hyprland/media"
+        "hyprland/media",
+        "custom/tomato"
     ],
     "modules-center": [
         "hyprland/window"
@@ -248,5 +249,12 @@
 	"on-click": "rofi -show drun -terminal 'kitty' -font 'IosevkaTerm Nerd Font 12' -show-icons -theme fullscreen-preview",
 	"tooltip": "true",
 	"tooltip-format": "NixOS 24.11"
+    },
+    "custom/tomato": {
+        "format": "{}",
+        "exec": "tomato -t",
+        "interval": 1,
+        "tooltip": "true",
+        "tooltip-format": "SUPER+T"
     }
 }
