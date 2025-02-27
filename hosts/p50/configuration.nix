@@ -209,6 +209,7 @@
     #alsa-utils # alsamixer
     pulsemixer
     cifs-utils # SAMBA
+    usbutils
    ];
 
 
