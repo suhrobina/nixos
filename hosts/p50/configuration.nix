@@ -274,6 +274,11 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # Enable power-profiles-daemon for dynamic power profile switching
+  # (e.g., Performance, Balanced, Power Saver) in supported desktop
+  # environments like GNOME or KDE.
+  services.power-profiles-daemon.enable = true;
+
   # Set Environment Variables
   environment.variables = {
     NIXPKGS_ALLOW_UNFREE = "1";
