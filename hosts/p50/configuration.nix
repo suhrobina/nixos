@@ -28,7 +28,7 @@
       # Modules
       ../../modules/zsh.nix
       ../../modules/nixvim.nix
-      #../../modules/gpu.nix
+      ../../modules/gpu.nix
       ../../modules/hyprland.nix
       ../../modules/gaming.nix
       ../../modules/virtualisation.nix
@@ -204,12 +204,12 @@
     vlc
     just
     inetutils
-    pomodoro-gtk
     turbovnc # TightVNC
     #alsa-utils # alsamixer
     pulsemixer
     cifs-utils # SAMBA
     usbutils
+    iotop
    ];
 
 
