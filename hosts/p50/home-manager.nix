@@ -14,7 +14,6 @@ in
     (import "${home-manager}/nixos")
   ];
 
-
   users.users.suhrob.isNormalUser = true;
 
   home-manager.users.suhrob = { pkgs, config, ... }: {
@@ -27,6 +26,15 @@ in
     # want to update the value, then make sure to first check the Home Manager
     # release notes.
     home.stateVersion = "24.11";
+
+    # Enable and create XDG base and user directories
+    xdg = {
+      enable = true;
+      userDirs = {
+        enable = true;
+        createDirectories = true;
+      };
+    };
 
     # VSC options
     programs.git = {
