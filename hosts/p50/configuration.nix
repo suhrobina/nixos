@@ -263,6 +263,11 @@
     # settings.PermitRootLogin = "yes";
   };
 
+  # Enable SSH client configuration
+  programs.ssh = {
+    startAgent = true; # Start SSH agent automatically
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
