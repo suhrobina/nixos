@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  # Enable hardware accelerated graphics drivers.
+  # Enable hardware accelerated graphics drivers
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
