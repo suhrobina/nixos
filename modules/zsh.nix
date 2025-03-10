@@ -50,6 +50,9 @@
       # Alias to run commands as sudo quickly
       _ = "sudo ";
 
+      # Elevate to root while preserving the user environment;
+      __ = "sudo -E su";
+
       # List directory contents
       ls  = "eza --color=auto --classify=auto --group-directories-first";
       lsa = "eza --all --long --header --git --color=auto --group-directories-first --classify=auto --icons --tree --level=1";

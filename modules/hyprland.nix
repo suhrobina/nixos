@@ -46,6 +46,10 @@
     hypridle
     hyprshade
     hyprpolkitagent
+
+    # Screenshot
+    grimblast # grimblast check
+    swappy
   ];
 
   fonts.packages = with pkgs; [
@@ -57,5 +61,6 @@
     WLR_NO_HARDWARE_CURSES = "1";
     NIXOS_ONLINE_WL = "1";
     MOZ_ENABLE_WAYLAND="1"; # for screensharing
+    GRIMBLAST_EDITOR="swappy -f";
   };
 }

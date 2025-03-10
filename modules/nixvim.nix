@@ -166,6 +166,9 @@ in
 
       " -- OTHERS -------------------------------------------------------------------
 
+      " Always open Explore
+          command! -nargs=* E Explore
+
       " Vertical Split & Explore
           map <silent> <F10> :Vexplore<CR>
 

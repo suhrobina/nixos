@@ -210,6 +210,14 @@
     cifs-utils # SAMBA
     usbutils
     iotop
+    drawio
+    lsof
+    ntfs3g # NTFS filesystem support
+
+    pinta
+    krita
+    gimp
+    # davinci-resolve
    ];
 
 
