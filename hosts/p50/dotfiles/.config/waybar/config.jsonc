@@ -134,7 +134,7 @@
         "interval": 2,
         "format": "  {usage}%",
         "tooltip": false,
-        "on-click": "kitty -e btop",
+        "on-click": "hyprctl dispatch closewindow 'class:kitty-btop' && kitty --class=kitty-btop -e tmux new-session -A -s 'Btop' btop",
         "states": {
             "average":41,
             "high":81
@@ -143,7 +143,7 @@
     "memory": {
         "interval": 2,
         "format": "  {}%",
-        "on-click": "kitty -e btop"
+        "on-click": "hyprctl dispatch closewindow 'class:kitty-btop' && kitty --class=kitty-btop -e tmux new-session -A -s 'Btop' btop"
     },
     "temperature": {
         "interval": 2,
@@ -153,7 +153,7 @@
         // "format-critical": "{temperatureC}°C {icon}",
         "format": " {icon} {temperatureC}°C",
         "format-icons": ["", "", ""],
-        "on-click": "kitty -e btop"
+        "on-click": "hyprctl dispatch closewindow 'class:kitty-btop' && kitty --class=kitty-btop -e tmux new-session -A -s 'Btop' btop"
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -218,7 +218,7 @@
             "default": ["", " ", " "]
         },
         //"on-click": "pavucontrol"
-        "on-click": "kitty -e pulsemixer"
+        "on-click": "hyprctl dispatch closewindow 'class:kitty-pulsemixer' && kitty --class=kitty-pulsemixer -e pulsemixer"
     },
     "custom/media": {
         "format": "{icon} {text}",
@@ -255,6 +255,7 @@
         "exec": "tomato -t",
         "interval": 1,
         "tooltip": "true",
-        "tooltip-format": "SUPER+T"
+        "tooltip-format": "SUPER+T",
+        "on-click": "hyprctl dispatch closewindow 'class:kitty-tomato' && kitty --class=kitty-tomato -e tmux new-session -A -s 'Tomato' tomato"
     }
 }

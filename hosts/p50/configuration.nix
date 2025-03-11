@@ -32,6 +32,7 @@
       ../../modules/hyprland.nix
       ../../modules/gaming.nix
       ../../modules/virtualisation.nix
+      ../../modules/docker.nix
     ];
 
   # Enable/Disable imported modules
@@ -217,7 +218,7 @@
     pinta
     krita
     gimp
-    # davinci-resolve
+    davinci-resolve
    ];
 
 
