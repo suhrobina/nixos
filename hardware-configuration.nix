@@ -1,1 +1,1 @@
-/etc/nixos/hosts/p50/hardware-configuration.nix
+/etc/nixos/hosts/P50/hardware-configuration.nix
