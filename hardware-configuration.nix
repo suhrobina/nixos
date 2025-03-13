@@ -1,1 +1,0 @@
-/etc/nixos/hosts/Z2G9/hardware-configuration.nix
