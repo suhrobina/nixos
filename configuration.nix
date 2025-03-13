@@ -1,1 +1,1 @@
-/etc/nixos/hosts/P50/configuration.nix
+/etc/nixos/hosts/Z2G9/configuration.nix

@@ -1,1 +1,1 @@
-/etc/nixos/hosts/P50/home-manager.nix
+/etc/nixos/hosts/Z2G9/home-manager.nix
