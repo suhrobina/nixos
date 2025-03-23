@@ -170,7 +170,10 @@
     # Networking
     nethogs
     winbox
+    networkmanager
+    networkmanagerapplet
     wireguard-tools # Configure connection via nmcli, nmtui and native wg
+
 
     # File-Manager
     nnn mc yazi
@@ -219,6 +222,8 @@
     krita
     gimp
     davinci-resolve
+    gparted
+    rustdesk
    ];
 
 
