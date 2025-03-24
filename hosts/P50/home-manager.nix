@@ -121,6 +121,7 @@ in
 
       # GTK Settings Editor
       pkgs.nwg-look
+      pkgs.lxappearance
 
       # QT5/QT6 Configuration Tool
       pkgs.libsForQt5.qt5ct

@@ -33,6 +33,7 @@
       ../../modules/gaming.nix
       ../../modules/virtualisation.nix
       ../../modules/docker.nix
+      ../../modules/openbox.nix
     ];
 
   # Enable/Disable imported modules
@@ -76,6 +77,8 @@
   # Enable the GNOME Desktop Environment.
   #services.xserver.displayManager.gdm.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
+
+  services.xserver.windowManager.openbox.enable = true;
 
   # Enable a minimal TUI Display Manager
   services.displayManager.ly.enable = true;
@@ -224,6 +227,8 @@
     davinci-resolve
     gparted
     rustdesk
+    gnupg gpg-tui
+    appimage-run
    ];
 
 
