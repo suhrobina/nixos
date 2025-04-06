@@ -101,6 +101,12 @@ in
       };
     };
 
+    # Enable Syncthing
+    services.syncthing = {
+      enable = true;
+      tray.enable = true;
+    };
+
     home.packages = [
       # # Adds the 'hello' command to your environment. It prints a friendly
       # # "Hello, world!" when run.
@@ -155,6 +161,7 @@ in
       # files and directories. Ensure that the source file or directory exists
       # before creating the symlink, and that the target path does not already
       # exist to avoid conflicts.
+      "${homeFolder}/.profile".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.profile";
       "${homeFolder}/.config/hypr/hyprland.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprland.conf";
       "${homeFolder}/.config/hypr/hyprpaper.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprpaper.conf";
       "${homeFolder}/.config/hypr/hyprlock.conf".source = config.lib.file.mkOutOfStoreSymlink "${configFolder}/.config/hypr/hyprlock.conf";
@@ -187,6 +194,7 @@ in
       XCURSOR_SIZE = "24";
       GTK_CURSOR_THEME = "Adwaita";
       GTK_CURSOR_SIZE = "24";
+      QT_QPA_PLATFORMTHEME = "qt5ct";
     };
 
   };

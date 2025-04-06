@@ -55,8 +55,8 @@
 
       # List directory contents
       ls  = "eza --color=auto --classify=auto --group-directories-first";
-      lsa = "eza --all --long --header --git --color=auto --group-directories-first --classify=auto --icons --tree --level=1";
-      lsl = "eza --all --long --header --git --color=auto --group-directories-first --classify=auto --icons --tree --level=1";
+      lsa = "eza --all --long --header --git --color=auto --group --group-directories-first --classify=auto --icons --tree --level=1";
+      lsl = "eza --all --long --header --git --color=auto --group --group-directories-first --classify=auto --icons --tree --level=1";
 
       # grep & diff
       grep  = "grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}";
