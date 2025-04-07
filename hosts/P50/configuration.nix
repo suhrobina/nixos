@@ -34,7 +34,11 @@
       ../../modules/virtualisation.nix
       ../../modules/docker.nix
       ../../modules/openbox.nix
-    ];
+    ]
+
+    # Load private settings if they exist
+    ++ (if builtins.pathExists ../../modules/extra-config.nix then [ ../../modules/extra-config.nix ] else []);
+
 
   # Enable/Disable imported modules
   virtualisation.enable = true;
