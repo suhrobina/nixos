@@ -82,8 +82,6 @@
   #services.xserver.displayManager.gdm.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
 
-  services.xserver.windowManager.openbox.enable = true;
-
   # Enable a minimal TUI Display Manager
   services.displayManager.ly.enable = true;
 
@@ -234,7 +232,7 @@
     gnupg gpg-tui kleopatra
     appimage-run
     steam-run
-    pidgin
+    dino
 
     keepassxc
    ];
