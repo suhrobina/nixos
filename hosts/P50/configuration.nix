@@ -235,6 +235,8 @@
     dino
 
     keepassxc
+
+    libimobiledevice ifuse
    ];
 
 
@@ -292,6 +294,11 @@
   # Enable SSH client configuration
   programs.ssh = {
     startAgent = true; # Start SSH agent automatically
+  };
+
+  services.usbmuxd = {
+    enable = true;
+    # package = pkgs.usbmuxd2;
   };
 
   # Open ports in the firewall.
