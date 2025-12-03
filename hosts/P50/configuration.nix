@@ -237,6 +237,7 @@
     keepassxc
 
     libimobiledevice ifuse
+    pptp
    ];
 
 
@@ -298,7 +299,7 @@
 
   services.usbmuxd = {
     enable = true;
-    # package = pkgs.usbmuxd2;
+    package = pkgs.usbmuxd2;
   };
 
   # Open ports in the firewall.
