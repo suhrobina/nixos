@@ -102,10 +102,7 @@ in
     };
 
     # Enable Syncthing
-    services.syncthing = {
-      enable = true;
-      tray.enable = true;
-    };
+    services.syncthing.enable = true;
 
     home.packages = [
       # # Adds the 'hello' command to your environment. It prints a friendly
@@ -135,6 +132,9 @@ in
 
       # Library that sends desktop notifications to a notification daemon
       pkgs.libnotify
+
+      # A Traybar Application for Syncthing written in C++
+      pkgs.qsyncthingtray
     ];
 
     # Method #1
