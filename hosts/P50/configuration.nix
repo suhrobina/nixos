@@ -238,6 +238,7 @@
 
     libimobiledevice ifuse
     pptp
+    rar
    ];
 
 
