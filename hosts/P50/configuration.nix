@@ -196,6 +196,7 @@
     telegram-desktop
     remmina
     transmission_4-gtk
+    gajim
 
     # Office
     libreoffice-qt
@@ -239,6 +240,10 @@
     libimobiledevice ifuse
     pptp
     rar
+
+    kicad
+
+    firejail # lightwaight security tool
    ];
 
 
